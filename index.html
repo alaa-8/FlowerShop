@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Market | Boutique Florist & Fine Sweets</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Config & Custom Styles -->
+  <script src="assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-cream text-[#2C332D] font-sans antialiased selection:bg-blush selection:text-forest">
+
+  <!-- ================= TOP ANNOUNCEMENT BANNER ================= -->
+  <div class="bg-forest text-cream text-xs font-semibold py-2 px-4 text-center tracking-wider flex items-center justify-center gap-2">
+    <span>❀ Fresh morning arrivals delivered in thermal boxes • Free delivery on orders over $50 ❀</span>
+  </div>
+
+  <!-- ================= MAIN NAVIGATION HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-md border-b-2 border-blush transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <span class="w-12 h-12 rounded-full bg-blush-soft border border-blush flex items-center justify-center text-2xl shadow-inner group-hover:rotate-12 transition-transform duration-300">
+          🌸
+        </span>
+        <div class="flex flex-col">
+          <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-forest leading-none">
+            <span class="text-blush-rose">❀ FLOWER</span> MARKET ❀
+          </span>
+          <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-forest/70 mt-1">Boutique Florist & Sweets</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-7 font-serif text-sm tracking-wide text-forest font-semibold">
+        <a href="#home" class="hover:text-blush-rose transition-colors">Home</a>
+        <a href="#catalog" class="hover:text-blush-rose transition-colors">Flowers</a>
+        <a href="#catalog" class="hover:text-blush-rose transition-colors">Chocolates</a>
+        <a href="#catalog" class="hover:text-blush-rose transition-colors">Gifts</a>
+        <a href="#customizer" class="hover:text-blush-rose transition-colors">DIY Bouquet</a>
+        <a href="#about" class="hover:text-blush-rose transition-colors">About Us</a>
+        <a href="#gallery" class="hover:text-blush-rose transition-colors">Gallery</a>
+        <a href="#contact" class="hover:text-blush-rose transition-colors">Contact</a>
+      </nav>
+
+      <!-- Cart Action & Mobile Menu Toggle -->
+      <div class="flex items-center gap-3">
+        <button id="openCartBtn" class="relative flex items-center gap-2.5 bg-white border border-blush px-4 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all active:scale-95 text-forest font-semibold text-sm">
+          <span class="text-xl">🧺</span>
+          <span class="hidden sm:inline">Gift Basket</span>
+          <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-forest text-white text-xs font-bold flex items-center justify-center ml-0.5">
+            0
+          </span>
+        </button>
+
+        <button id="mobileNavToggle" aria-label="Toggle Navigation" class="lg:hidden p-2.5 rounded-xl border border-blush bg-white text-forest hover:text-blush-rose transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileNavMenu" class="hidden lg:hidden border-t border-blush bg-cream/98 px-6 py-5 space-y-3 font-serif font-semibold text-base text-forest shadow-lg">
+      <a href="#home" class="block py-1 hover:text-blush-rose mobile-nav-link">Home</a>
+      <a href="#catalog" class="block py-1 hover:text-blush-rose mobile-nav-link">Our Flowers & Sweets</a>
+      <a href="#customizer" class="block py-1 hover:text-blush-rose mobile-nav-link">Custom Bouquet Builder</a>
+      <a href="#about" class="block py-1 hover:text-blush-rose mobile-nav-link">About Us</a>
+      <a href="#gallery" class="block py-1 hover:text-blush-rose mobile-nav-link">Our Gallery</a>
+      <a href="#contact" class="block py-1 hover:text-blush-rose mobile-nav-link">Contact Us</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="relative py-12 md:py-20 overflow-hidden bg-gradient-to-b from-cream to-blush-soft/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Text -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blush text-forest font-semibold text-xs uppercase tracking-widest shadow-sm">
+              <span>✿ Handcrafted with love for every occasion ✿</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-forest leading-[1.18] tracking-tight">
+              Where Every Rose <br class="hidden sm:inline">
+              <span class="italic text-blush-rose font-normal">Carries a Message</span> & Every Gift Tells a Story.
+            </h1>
+
+            <p class="text-forest/80 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
+              Welcome to <strong class="text-forest">Flower Market</strong>. We offer the most breathtaking natural blooms, artisanal Belgian chocolates, and curated gift hampers to celebrate weddings, birthdays, or just deserved moments.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+              <a href="#catalog" class="w-full sm:w-auto px-8 py-4 rounded-full bg-forest hover:bg-forest-dark text-white font-serif font-bold text-base shadow-lg shadow-forest/20 hover:shadow-forest/40 transform hover:-translate-y-0.5 transition-all text-center">
+                Explore The Collection ❀
+              </a>
+              <a href="#customizer" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white hover:bg-blush-light text-forest font-serif font-bold text-base border-2 border-blush shadow-sm transition-all text-center">
+                DIY Bouquet Studio 🎨
+              </a>
+            </div>
+
+            <!-- Features Bar -->
+            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-blush/60 max-w-lg mx-auto lg:mx-0">
+              <div class="text-center lg:text-left">
+                <span class="block font-serif text-2xl font-bold text-forest">100%</span>
+                <span class="text-xs text-forest/70">Fresh Dutch Blooms</span>
+              </div>
+              <div class="text-center lg:text-left">
+                <span class="block font-serif text-2xl font-bold text-blush-rose">Artisanal</span>
+                <span class="text-xs text-forest/70">Fine Sweets & Cocoa</span>
+              </div>
+              <div class="text-center lg:text-left">
+                <span class="block font-serif text-2xl font-bold text-forest">Same Day</span>
+                <span class="text-xs text-forest/70">Careful Hand Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Floral Frame Showcase -->
+          <div class="lg:col-span-5 flex justify-center relative">
+            <div class="relative w-80 h-96 sm:w-96 sm:h-[440px] rounded-[40px] overflow-hidden border-4 border-blush shadow-2xl p-3 bg-white animate-gentle">
+              <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80" alt="Exquisite Floral Arrangement" class="w-full h-full object-cover rounded-[32px]">
+              
+              <!-- Floating Badge -->
+              <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-blush shadow-lg flex items-center gap-3">
+                <span class="text-3xl">🌸</span>
+                <div>
+                  <h4 class="font-serif font-bold text-sm text-forest leading-tight">Fresh Daily Arrangement</h4>
+                  <p class="text-[11px] text-forest/70">Crafted by master florists with morning dew petals</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERACTIVE DIY BOUQUET BUILDER ================= -->
+    <section id="customizer" class="py-16 md:py-24 bg-white border-y-2 border-blush/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="inline-block px-4 py-1 rounded-full bg-blush text-forest font-serif font-bold text-xs uppercase tracking-widest mb-2">
+            Bespoke Floral Studio
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest">
+            Design Your Custom Gift Box
+          </h2>
+          <p class="text-forest/70 text-sm sm:text-base mt-2">
+            Select your preferred flowers, wrapping paper tone, silk ribbon, and sweet treats with real-time preview and cost calculation.
+          </p>
+        </div>
+
+        <div class="bg-cream rounded-3xl p-6 sm:p-10 border-2 border-blush shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Visualizer Card -->
+          <div class="lg:col-span-6 bg-white rounded-2xl border-2 border-blush p-8 flex flex-col items-center justify-center text-center relative overflow-hidden">
+            <span class="absolute top-4 left-4 text-[10px] uppercase font-bold tracking-widest text-forest/60 px-3 py-1 bg-cream rounded-full border border-blush">
+              Live Preview
+            </span>
+
+            <div class="w-56 h-56 sm:w-64 sm:h-64 my-4 flex items-center justify-center relative">
+              <!-- Wrapping Paper Mockup Circle -->
+              <div id="builderWrapPreview" class="w-48 h-48 sm:w-56 sm:h-56 rounded-full bg-blush-rose/30 flex items-center justify-center transition-all duration-300 shadow-inner">
+                <!-- Center Flower Cluster Emoji -->
+                <span id="builderFlowerIcon" class="text-7xl sm:text-8xl drop-shadow-md transition-transform duration-300">
+                  🌹
+                </span>
+              </div>
+              <!-- Ribbon Badge -->
+              <div id="builderRibbonBadge" class="absolute bottom-2 bg-forest text-cream text-[11px] font-bold px-4 py-1 rounded-full border border-blush shadow-md transition-colors">
+                Silk Ribbon
+              </div>
+            </div>
+
+            <div class="space-y-1 mt-2">
+              <h3 id="builderSummaryTitle" class="font-serif font-bold text-lg text-forest">
+                Dutch Rose Bouquet in Pink Silk Wrap
+              </h3>
+              <p id="builderAddonsSummary" class="text-xs text-forest/70">With Belgian Chocolate Box</p>
+              <div id="builderPriceTag" class="font-serif text-2xl font-bold text-forest pt-1">
+                $35.00
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Form -->
+          <div class="lg:col-span-6 space-y-6">
+            
+            <!-- Step 1: Flower Selection -->
+            <div>
+              <label class="block font-serif font-bold text-sm text-forest mb-2">1. Choose Primary Flower</label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="builderFlowerOptions">
+                <button type="button" data-flower="roses" data-name="Dutch Roses" data-price="25" data-icon="🌹" class="flower-opt-btn p-3 rounded-xl border-2 border-forest bg-white text-xs font-serif font-semibold text-forest flex flex-col items-center gap-1 transition-all">
+                  <span class="text-2xl">🌹</span> Roses (+$25)
+                </button>
+                <button type="button" data-flower="tulips" data-name="Pastel Tulips" data-price="22" data-icon="🌷" class="flower-opt-btn p-3 rounded-xl border-2 border-blush bg-white text-xs font-serif font-semibold text-forest flex flex-col items-center gap-1 transition-all">
+                  <span class="text-2xl">🌷</span> Tulips (+$22)
+                </button>
+                <button type="button" data-flower="sunflowers" data-name="Sunflowers" data-price="20" data-icon="🌻" class="flower-opt-btn p-3 rounded-xl border-2 border-blush bg-white text-xs font-serif font-semibold text-forest flex flex-col items-center gap-1 transition-all">
+                  <span class="text-2xl">🌻</span> Sunflowers (+$20)
+                </button>
+                <button type="button" data-flower="lilies" data-name="Pure Lilies" data-price="28" data-icon="🪷" class="flower-opt-btn p-3 rounded-xl border-2 border-blush bg-white text-xs font-serif font-semibold text-forest flex flex-col items-center gap-1 transition-all">
+                  <span class="text-2xl">🪷</span> Lilies (+$28)
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Wrapping Style -->
+            <div>
+              <label class="block font-serif font-bold text-sm text-forest mb-2">2. Luxurious Wrapping Paper</label>
+              <div class="grid grid-cols-3 gap-2.5" id="builderWrapOptions">
+                <button type="button" data-wrap="pink" data-name="Pastel Pink Silk" data-bg="#F3AEC2" class="wrap-opt-btn py-2.5 px-3 rounded-xl border-2 border-forest bg-white text-xs font-serif font-semibold flex items-center justify-center gap-2 transition-all">
+                  <span class="w-4 h-4 rounded-full bg-[#F3AEC2] border border-black/10"></span> Pink Silk
+                </button>
+                <button type="button" data-wrap="kraft" data-name="Rustic Kraft" data-bg="#D9B382" class="wrap-opt-btn py-2.5 px-3 rounded-xl border-2 border-blush bg-white text-xs font-serif font-semibold flex items-center justify-center gap-2 transition-all">
+                  <span class="w-4 h-4 rounded-full bg-[#D9B382] border border-black/10"></span> Rustic Kraft
+                </button>
+                <button type="button" data-wrap="forest" data-name="Velvet Emerald" data-bg="#1B4D3E" class="wrap-opt-btn py-2.5 px-3 rounded-xl border-2 border-blush bg-white text-xs font-serif font-semibold flex items-center justify-center gap-2 transition-all">
+                  <span class="w-4 h-4 rounded-full bg-[#1B4D3E] border border-black/10"></span> Emerald
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Add-on Gift -->
+            <div>
+              <label class="block font-serif font-bold text-sm text-forest mb-2">3. Include Sweet Add-on</label>
+              <div class="grid grid-cols-3 gap-2.5" id="builderAddonOptions">
+                <button type="button" data-addon="chocolate" data-name="Belgian Chocolate Box" data-price="10" class="addon-opt-btn py-2.5 px-3 rounded-xl border-2 border-forest bg-white text-xs font-serif font-semibold text-center transition-all">
+                  🍫 Chocolate (+$10)
+                </button>
+                <button type="button" data-addon="candle" data-name="Scented Candle" data-price="7" class="addon-opt-btn py-2.5 px-3 rounded-xl border-2 border-blush bg-white text-xs font-serif font-semibold text-center transition-all">
+                  🕯️ Candle (+$7)
+                </button>
+                <button type="button" data-addon="teddy" data-name="Teddy Bear" data-price="10" class="addon-opt-btn py-2.5 px-3 rounded-xl border-2 border-blush bg-white text-xs font-serif font-semibold text-center transition-all">
+                  🧸 Teddy (+$10)
+                </button>
+              </div>
+            </div>
+
+            <button id="addCustomBouquetBtn" class="w-full py-4 rounded-full bg-forest hover:bg-forest-dark text-white font-serif font-bold text-sm tracking-wide shadow-lg shadow-forest/20 hover:shadow-forest/30 transition-all flex items-center justify-center gap-2 active:scale-95">
+              <span>Add Custom Bouquet to Basket ❀</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FULL PRODUCT CATALOG SECTION ================= -->
+    <section id="catalog" class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest">
+            ✿ Our Delicious Sweets & Special Flowers ✿
+          </h2>
+          <p class="text-forest/70 text-sm sm:text-base mt-2">
+            Carefully curated collections from our original bakery and floral ateliers.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center justify-center flex-wrap gap-2.5 mb-12" id="filterTabs">
+          <button data-filter="all" class="filter-btn px-6 py-2.5 rounded-full font-serif font-bold text-xs sm:text-sm bg-forest text-white shadow-md shadow-forest/20 transition-all">
+            All Items
+          </button>
+          <button data-filter="flowers" class="filter-btn px-6 py-2.5 rounded-full font-serif font-bold text-xs sm:text-sm bg-white text-forest border-2 border-blush hover:bg-blush-light transition-all">
+            Fresh Flowers 🌸
+          </button>
+          <button data-filter="chocolate" class="filter-btn px-6 py-2.5 rounded-full font-serif font-bold text-xs sm:text-sm bg-white text-forest border-2 border-blush hover:bg-blush-light transition-all">
+            Fine Sweets 🍫
+          </button>
+          <button data-filter="gifts" class="filter-btn px-6 py-2.5 rounded-full font-serif font-bold text-xs sm:text-sm bg-white text-forest border-2 border-blush hover:bg-blush-light transition-all">
+            Special Gifts 🎁
+          </button>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ABOUT US STORY SECTION ================= -->
+    <section id="about" class="py-16 bg-cream border-t-2 border-blush/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl border-2 border-blush p-8 sm:p-14 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-6 space-y-5">
+            <span class="inline-block px-3.5 py-1 bg-blush-soft text-forest text-xs font-serif font-bold uppercase tracking-widest rounded-full border border-blush">
+              About Flower Market
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest">
+              Welcome to Our Flower & Confectionery Shop
+            </h2>
+            <p class="text-forest/80 text-sm sm:text-base leading-relaxed">
+              At <strong>Flower Market</strong> we believe that every rose carries a message, and every gift tells a story. We offer the most beautiful natural roses and unique gifts that suit all happy occasions, from birthdays and weddings to "just deserved" moments.
+            </p>
+            <p class="text-forest/80 text-sm sm:text-base leading-relaxed">
+              With a touch of lovers, we hope every moment is unforgettable. We are proud to be part of your happiest moments and help you express your deepest feelings in the most poetic ways! 🌸🎁
+            </p>
+            
+            <div class="pt-2 flex items-center gap-6">
+              <div>
+                <span class="block font-serif text-xl font-bold text-forest">Amman, Jordan</span>
+                <span class="text-xs text-forest/70">Local Boutique & Delivery</span>
+              </div>
+              <div class="h-8 w-px bg-blush"></div>
+              <div>
+                <span class="block font-serif text-xl font-bold text-forest">Est. 2024</span>
+                <span class="text-xs text-forest/70">Handcrafted Memories</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="grid grid-cols-2 gap-4">
+              <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&q=80" alt="Rose Petals" class="rounded-2xl border-2 border-blush w-full h-48 object-cover shadow-sm">
+              <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80" alt="Fine Chocolates" class="rounded-2xl border-2 border-blush w-full h-48 object-cover shadow-sm mt-6">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PHOTO GALLERY (LIGHTBOX MODAL) ================= -->
+    <section id="gallery" class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-blush-soft text-forest font-serif font-bold text-xs uppercase tracking-widest mb-2 border border-blush">
+            Inspirations & Memories
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest">
+            ❀ Our Floral Gallery ❀
+          </h2>
+          <p class="text-forest/70 text-sm sm:text-base mt-2">
+            Click any picture to open full-screen preview and celebration details.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6" id="galleryGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTACT US INQUIRY SECTION ================= -->
+    <section id="contact" class="py-16 bg-white border-t-2 border-blush">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-blush-soft text-forest font-serif font-bold text-xs uppercase tracking-widest border border-blush">
+              Connect With Us
+            </span>
+            <h2 class="font-serif text-3xl font-bold text-forest">
+              Get in Touch with Our Floral Concierge
+            </h2>
+            <p class="text-forest/75 text-sm leading-relaxed">
+              Have a special wedding request, bespoke package inquiry, or questions about immediate flower delivery? Our team is at your service.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-cream border border-blush">
+                <span class="text-2xl">📍</span>
+                <div>
+                  <h4 class="font-serif font-bold text-sm text-forest">Boutique Address</h4>
+                  <p class="text-xs text-forest/70">Jl. Amman, Jordan. 121</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-cream border border-blush">
+                <span class="text-2xl">📞</span>
+                <div>
+                  <h4 class="font-serif font-bold text-sm text-forest">Direct Phone</h4>
+                  <p class="text-xs text-forest/70">+962 79789345</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-cream border border-blush">
+                <span class="text-2xl">💌</span>
+                <div>
+                  <h4 class="font-serif font-bold text-sm text-forest">Email Support</h4>
+                  <p class="text-xs text-forest/70">flowermarket2024@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-7 bg-cream rounded-3xl border-2 border-blush p-6 sm:p-10 shadow-sm">
+            <h3 class="font-serif font-bold text-xl text-forest mb-4">Send a Sweet Message</h3>
+            
+            <form id="contactForm" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-serif font-bold text-forest mb-1.5">Your Name</label>
+                  <input type="text" id="contactName" required placeholder="e.g. Sarah Ahmad" class="w-full px-4 py-3 rounded-xl border border-blush bg-white text-sm focus:outline-none focus:border-forest text-forest">
+                </div>
+                <div>
+                  <label class="block text-xs font-serif font-bold text-forest mb-1.5">Your Email</label>
+                  <input type="email" id="contactEmail" required placeholder="name@example.com" class="w-full px-4 py-3 rounded-xl border border-blush bg-white text-sm focus:outline-none focus:border-forest text-forest">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-serif font-bold text-forest mb-1.5">Occasion or Subject</label>
+                <input type="text" id="contactSubject" required placeholder="e.g. Wedding bouquet consultation" class="w-full px-4 py-3 rounded-xl border border-blush bg-white text-sm focus:outline-none focus:border-forest text-forest">
+              </div>
+
+              <div>
+                <label class="block text-xs font-serif font-bold text-forest mb-1.5">Your Request / Message</label>
+                <textarea id="contactMessage" rows="4" required placeholder="Tell us what blooms or sweet gifts you'd love..." class="w-full px-4 py-3 rounded-xl border border-blush bg-white text-sm focus:outline-none focus:border-forest text-forest resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 rounded-full bg-forest hover:bg-forest-dark text-white font-serif font-bold text-sm tracking-wide shadow-md shadow-forest/20 transition-all active:scale-[0.99]">
+                Send Message ❀
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SLIDE-OUT CART BASKET DRAWER ================= -->
+  <div id="cartOverlay" class="fixed inset-0 bg-forest/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+  <aside id="cartDrawer" class="fixed top-0 right-0 w-full max-w-md h-full bg-white z-50 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out border-l-2 border-blush">
+    
+    <!-- Drawer Header -->
+    <div class="p-6 border-b-2 border-blush flex items-center justify-between bg-blush-soft">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">🧺</span>
+        <h3 class="font-serif text-xl font-bold text-forest">Your Gift Basket</h3>
+      </div>
+      <button id="closeCartBtn" class="w-9 h-9 rounded-full bg-white border border-blush flex items-center justify-center text-forest hover:text-blush-rose transition-colors">
+        ✕
+      </button>
+    </div>
+
+    <!-- Free Delivery Indicator -->
+    <div class="bg-forest-subtle px-6 py-2.5 border-b border-blush/40 text-xs text-forest flex items-center justify-between">
+      <span id="freeDeliveryText">Add $50 for Free Delivery!</span>
+      <span class="font-bold text-forest">🚚</span>
+    </div>
+
+    <!-- Cart Item List -->
+    <div id="cartItemsList" class="flex-1 overflow-y-auto p-6 space-y-4">
+      <!-- Generated via JS -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="p-6 border-t-2 border-blush bg-cream space-y-4">
+      <div class="space-y-1 text-sm">
+        <div class="flex justify-between text-forest/70">
+          <span>Subtotal</span>
+          <span id="cartSubtotal" class="font-bold text-forest">$0.00</span>
+        </div>
+        <div class="flex justify-between text-forest/70">
+          <span>Standard Delivery</span>
+          <span id="deliveryCost" class="text-forest font-semibold">$5.00</span>
+        </div>
+        <div class="flex justify-between text-base font-serif font-bold text-forest pt-2 border-t border-blush">
+          <span>Estimated Total</span>
+          <span id="cartTotal" class="text-xl text-forest font-bold">$0.00</span>
+        </div>
+      </div>
+
+      <button id="checkoutBtn" class="w-full py-4 rounded-full bg-forest hover:bg-forest-dark text-white font-serif font-bold text-base shadow-lg shadow-forest/20 transition-all flex items-center justify-center gap-2 active:scale-95">
+        <span>Proceed to Checkout</span>
+        <span>❀</span>
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ================= GALLERY LIGHTBOX MODAL ================= -->
+  <div id="lightboxModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="relative bg-white rounded-3xl max-w-lg w-full overflow-hidden border-2 border-blush shadow-2xl p-4 text-center">
+      <button id="closeLightboxBtn" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 border border-blush flex items-center justify-center text-forest font-bold text-lg hover:text-blush-rose">
+        ✕
+      </button>
+      <img id="lightboxImg" src="" alt="Gallery Preview" class="w-full h-72 object-cover rounded-2xl mb-4">
+      <h3 id="lightboxTitle" class="font-serif font-bold text-xl text-forest"></h3>
+      <p id="lightboxDesc" class="text-xs text-forest/70 mt-1 max-w-sm mx-auto"></p>
+    </div>
+  </div>
+
+  <!-- ================= TOAST ALERT ================= -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-forest text-white px-6 py-3 rounded-full text-sm font-serif font-bold shadow-2xl flex items-center gap-2 translate-y-24 opacity-0 transition-all duration-300 z-50 pointer-events-none">
+    <span>🌸</span>
+    <span id="toastText">Item added to your basket!</span>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-blush-soft border-t-2 border-forest py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+      
+      <div class="flex items-center justify-center gap-2">
+        <span class="text-2xl">❀</span>
+        <span class="font-serif text-2xl font-bold text-forest">FLOWER <span class="text-blush-rose">MARKET</span></span>
+        <span class="text-2xl">❀</span>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 font-serif text-sm font-semibold text-forest">
+        <a href="#home" class="hover:text-blush-rose transition-colors">HOME</a>
+        <span>❀</span>
+        <a href="#about" class="hover:text-blush-rose transition-colors">ABOUT US</a>
+        <span>❀</span>
+        <a href="#contact" class="hover:text-blush-rose transition-colors">CONTACT US</a>
+        <span>❀</span>
+        <a href="#gallery" class="hover:text-blush-rose transition-colors">OUR GALLERY</a>
+      </div>
+
+      <p class="text-xs text-forest/70 max-w-md mx-auto pt-2">
+        © 2026 Flower Market Boutique. Expressing delicate feelings through fragrant petals and heavenly sweets.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
